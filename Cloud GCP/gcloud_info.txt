@@ -1,0 +1,28 @@
+1. gcloud init
+   [1] Re-initialize this configuration [default] with new settings
+   [1] nandinideshmukh1103@gmail.com
+   [2] gcp-aiml-sandbox-nandini-124
+2. gcloud storage buckets create gs://gcp-aiml-dummydata-swetali --default-storage-class=NEARLINE --location=US-CENTRAL1 --enable-hierarchical-namespace --uniform-bucket-level-access --public-access-prevention
+3. gcloud storage buckets list
+4. gcloud storage buckets describe gs://gcp-aiml-dummydata-swetali
+5. gcloud storage buckets delete gs://gcp-aiml-dummydata-swetali
+
+Upload object: 
+gcloud storage cp D:\files\sample.txt gs://nandini-storage-20260727
+
+Delete object:
+gcloud storage rm gs://nandini-storage-20260727/sample.txt
+
+Copy an Object:
+gcloud storage cp \
+gs://nandini-storage-20260727/notes.txt \
+gs://nandini-storage-20260727/notes_data.txt
+
+Move an Object:
+gcloud storage mv \
+gs://nandini-storage-20260727/notes.txt \
+gs://nandini-storage-20260727/archive/notes.txt
+
+Verify:
+gcloud storage ls gs://nandini-storage-20260727/archive/
+gcloud storage ls gs://nandini-storage-20260727/
